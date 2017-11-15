@@ -2,7 +2,7 @@
 
 ## Network Architecture Breakdown:
 
-![alt text](./misc_images/architecture.png)
+<img src="./misc_imgs/architecture.png"/>
 
 #### 1. Architecture Composition
 The above network architecture is comprised of 3 encoders, 1 1x1 convolutional layer and then 3 decoders with skip connections.
@@ -54,14 +54,14 @@ The default value of 200 was chosen for this and the batch size was adjusted acc
 This is similar to steps per epoch and is the number of batches of validation images that go through the network in 1 epoch.
 For ~1200 validation images and 42 batch size, 30 validation steps were chosen to cover the data.
 
-### Model Limitations (for use with other objects)
+## Model Limitations (for use with other objects)
 This model (using the available data) has been trained to follow only one person and it in its present state (using the same trained weights) can not be used to follow any other object. The network however, is capable of being trained to follow another person or object given the hyperparameters may need tuning to suit the needs but the most important task would be to acquire data and then to train the network to identify that person or object.
 
-### Results and Future Enhancements
+## Results and Future Enhancements
 My score incresed from an initial score of 33% to 41.2% by tuning the hyperparameters such as decreasing the learning rate from 0.05 to 0.01, increasing the number of epochs from 15 to 25 and increasing the batch size from 32 to 42. A good imporvement was doubling the training data by flipping all the images horizontally. Doubling the number of filters in the 1x1 convolutional layer also bumped my score up a bit.
 The most important enhancement that I can think of for my model would be to expand the training data and collect more useful data such as that of the hero from afar. Other than this, further tuning of hyperparameters would increase the accuracy of the model which I was limited to test due to the lack of computational resources.
 
-### Submissions
+## Submissions
 1. A final score of 41.2% was achieved as can be seen in the model_training.ipynb notebook in './code'.
 2. An HTML version of model_training.ipynb notebook has been provided in the main directory of the repo.
 3. Weights file in the .h5 file format has been provided in './data/weights'.
